@@ -1,12 +1,12 @@
-
-FROM openjdk:11-jre-slim
+FROM openjdk:11-jre
 
 LABEL maintainer="The Apache Lucene/Solr Project"
 LABEL repository="https://github.com/docker-solr/docker-solr"
 
-ARG SOLR_VERSION="8.9.0"
-ARG SOLR_SHA512="15150b7f191fd9e8d2c1bd8bb619dd4b3f27af2e0e94b7609031f7e745a2e263391c30f68865c208afb97ccaa9bde6d16050200e9bfccef65f762c2ed743c242"
-ARG SOLR_KEYS="9722F25F650057E26C803B60A6D064D833B3A969"
+ARG SOLR_VERSION="8.11.0"
+ARG SOLR_SHA512="fa766775a70ee636792149baa20a541fa043a7579d499324072965f0c241600b75afe940d2b6c90cafb4b14b9c5f1c2a7bd0844c7d198ba9a36f09e427262dd2"
+ARG SOLR_KEYS="E6E21FFCDCEA14C95910EA65051A0FAF76BC6507"
+# ="2CECBFBA181601547B654B9FFA81AC8A490F538E"
 # If specified, this will override SOLR_DOWNLOAD_SERVER and all ASF mirrors. Typically used downstream for custom builds
 ARG SOLR_DOWNLOAD_URL
 
@@ -115,17 +115,10 @@ RUN set -ex; \
 
 COPY --chown=0:0 scripts /opt/docker-solr/scripts
 
-# download and install tomcat
-RUN mkdir /opt/tomcat
-WORKDIR /opt/tomcat
-
-RUN wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.14/bin/apache-tomcat-10.0.14.tar.gz
-RUN tar -xzvf apache-tomcat-10.0.14.tar.gz 
-
 VOLUME /var/solr
 EXPOSE 8983
 WORKDIR /opt/solr
 USER $SOLR_USER
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-# CMD ["solr-foreground"]
+CMD ["solr-foreground"]
