@@ -1,5 +1,6 @@
 # log4j-box
 
+![idea.png](idea.png)
 to build use the following command
 
 ```bash
