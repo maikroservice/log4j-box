@@ -1,11 +1,5 @@
 FROM openjdk:8u181-jdk-alpine
 
-
-
-
-
-
-
 RUN apk add --no-cache wget tar bash lsof
 
 COPY docker-entrypoint.sh .
