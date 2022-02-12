@@ -2,10 +2,21 @@ from flask import Flask, abort, render_template, request, send_file
 
 app = Flask(__name__)
 
-
 @app.route("/", methods=['GET'])
 def index():
     return render_template("index.html")
+
+@app.route("/facilities", methods=['GET'])
+def facilities():
+    return render_template("facilities.html")
+
+@app.route("/contact", methods=['GET'])
+def contact():
+    return render_template("contact.html")
+
+@app.route("/livestream", methods=['GET'])
+def livestream():
+    return render_template("livestream.html")
 
 @app.route("/videos")
 def download_videos():
@@ -24,4 +35,4 @@ def download_videos():
 
 
 if __name__ ==  "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
