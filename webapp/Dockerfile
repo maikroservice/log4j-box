@@ -8,8 +8,8 @@ RUN pip install --upgrade pip
 
 
 
-COPY ./ /var/www/localhost/htdocs
-RUN chmod 0755 /var/www/localhost/htdocs
+COPY ./ /app
+RUN chmod 0755 /app
 
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
