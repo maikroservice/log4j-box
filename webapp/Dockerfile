@@ -7,12 +7,18 @@ ENV PYTHONDONTWRITEBYTECODE 1
 RUN pip install --upgrade pip
 
 
-
 COPY ./ /app
 RUN chmod 0755 /app
 
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+RUN addgroup --system appgroup 
+RUN adduser appuser
+RUN adduser appuser appgroup
+RUN mv /app /home/appuser/
 USER appuser
-WORKDIR /home/appuser
 
-EXPOSE 80
+WORKDIR /home/appuser/app
+RUN pip install -r requirements.txt
+EXPOSE 8080
+ENTRYPOINT [ "python" ]
+
+CMD [ "app.py" ]

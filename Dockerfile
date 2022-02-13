@@ -1,4 +1,5 @@
 FROM openjdk:8u181-jdk-alpine
+LABEL maintainer="20245897+maikroservice@users.noreply.github.com"
 
 RUN apk add --no-cache wget tar bash lsof
 

@@ -3,14 +3,12 @@ version: "3"
 services:
     app:
       build:
-        context: .
-      ports:
-        - "8000:8000"
+        context: webapp
+        dockerfile: Dockerfile
+      ports: ["8080:8080"]
       volumes:
-        - ./app:/app
-      command: >
-        sh -c "python manage.py runserver 0.0.0.0:8000"
+      - $PWD/:/app
     solr:
       build:
         context: .
-      ports: "8983:8983"
+      ports: ["8983:8983"]

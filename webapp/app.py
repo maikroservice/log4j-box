@@ -18,6 +18,7 @@ def contact():
 def livestream():
     return render_template("livestream.html")
 
+# new endpoint - username for solr is "SupeRADmin" - password needs to change, see security.json
 @app.route("/videos")
 def download_videos():
     blocklist = ["phar://", "zip://", "ftp://", "file://", "http://", "//", "data://", "expect://", "https://", "../", "./"]
@@ -35,4 +36,4 @@ def download_videos():
 
 
 if __name__ ==  "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=False)

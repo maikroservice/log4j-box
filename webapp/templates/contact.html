@@ -9,13 +9,35 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/global-header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/global-footer.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/accessibility.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/contact-page.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/index.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/img/favicon.webp')}}" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/global-header.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/global-footer.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/accessibility.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/contact-page.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/index.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/img/favicon.webp') }}"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <header>
@@ -33,7 +55,7 @@
             <li class="header-nav-list">
               <a class="header-nav-link" href="/">Home</a>
             </li>
-           
+
             <li class="header-nav-list">
               <a class="header-nav-link" href="facilities">Facilities</a>
             </li>
@@ -42,8 +64,11 @@
                 >Contact Us</a
               >
             </li>
+
             <li class="header-nav-list">
-              <li class="header-nav-list"><a class="header-btn header-btn-custom" href="contact">BOOK NOW</a></li>
+              <a class="header-btn header-btn-custom" href="contact"
+                >BOOK NOW</a
+              >
             </li>
           </ul>
 
@@ -61,10 +86,11 @@
         <!-- Header part contain Title page and descriptoion -->
         <div class="header">
           <h2>Contact Us</h2>
-          
+
           <p>
-            Interested in booking specific slots or do you have any
-            feedback for us ? Please fill the form below.
+            Interested in booking specific slots or do you have any feedback for
+            us? <br />
+            Please fill the form below.
           </p>
         </div>
 
@@ -154,34 +180,57 @@
           </div>
           <div class="footer-contact-us">
             <h3 class="footer-description-title">Contact Us</h3>
-            <p class="footer-description-detail"> 
-              <img src="{{ url_for('static', filename='assets/img/map-pin.svg')}}" class="footer-description-icon" alt="star hotel location">
-  
-              <span>23, Fola Osibo, Lekki Phase 1</span></p>
             <p class="footer-description-detail">
-              <img src="{{ url_for('static', filename='assets/img/phone.svg')}}" class="footer-description-icon" alt="star hotels phone number"> 
-              <span>
-             08185956620</span></p>
+              <img
+                src="{{ url_for('static', filename='assets/img/map-pin.svg') }}"
+                class="footer-description-icon"
+                alt="star hotel location"
+              />
+
+              <span>23, Fola Osibo, Lekki Phase 1</span>
+            </p>
             <p class="footer-description-detail">
-              <img src="{{ url_for('static', filename='assets/img/mail.svg')}}" class="footer-description-icon" alt="star hotels email">
-              <span>support@starhotels.com</span> </p>
+              <img
+                src="{{ url_for('static', filename='assets/img/phone.svg') }}"
+                class="footer-description-icon"
+                alt="star hotels phone number"
+              />
+              <span> 08185956620</span>
+            </p>
+            <p class="footer-description-detail">
+              <img
+                src="{{ url_for('static', filename='assets/img/mail.svg') }}"
+                class="footer-description-icon"
+                alt="star hotels email"
+              />
+              <span>support@starhotels.com</span>
+            </p>
           </div>
           <div class="footer-follow-us">
             <h3 class="footer-description-title">Follow Us</h3>
             <ul class="footer-follow-us-lists">
               <li class="follow-us-list">
                 <a href="">
-                  <img src="{{ url_for('static', filename='assets/img/facebook.svg')}}" alt="star hotels facebook page">
+                  <img
+                    src="{{ url_for('static', filename='assets/img/facebook.svg') }}"
+                    alt="star hotels facebook page"
+                  />
                 </a>
               </li>
               <li class="follow-us-list">
                 <a href="">
-                  <img src="{{ url_for('static', filename='assets/img/twitter.svg')}}" alt="star hotels twitter page">
+                  <img
+                    src="{{ url_for('static', filename='assets/img/twitter.svg') }}"
+                    alt="star hotels twitter page"
+                  />
                 </a>
               </li>
               <li class="follow-us-list">
                 <a href="">
-                  <img src="{{ url_for('static', filename='assets/img/instagram.svg')}}" alt="star hotels instagram page">
+                  <img
+                    src="{{ url_for('static', filename='assets/img/instagram.svg') }}"
+                    alt="star hotels instagram page"
+                  />
                 </a>
               </li>
             </ul>
@@ -191,14 +240,18 @@
     </footer>
     <script defer async>
       (() => {
-        const loader = document.getElementById('loader');
-        const scrollBar = document.getElementsByClassName('scroll-bar')[0];
-        window.addEventListener('load', () => {
-          loader.classList.add('none');
-          scrollBar.classList.remove('scroll-bar')
+        const loader = document.getElementById("loader");
+        const scrollBar = document.getElementsByClassName("scroll-bar")[0];
+        window.addEventListener("load", () => {
+          loader.classList.add("none");
+          scrollBar.classList.remove("scroll-bar");
         });
       })();
     </script>
-    <script  defer async src="{{ url_for('static', filename='assets/js/toggleHamburger.js')}}"></script>
+    <script
+      defer
+      async
+      src="{{ url_for('static', filename='assets/js/toggleHamburger.js') }}"
+    ></script>
   </body>
 </html>
