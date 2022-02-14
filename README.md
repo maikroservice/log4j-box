@@ -1,16 +1,18 @@
 # log4j-box
 
-![idea.png](idea.png)
-to build use the following command
+## documentation
+
+[solution:](https://www.notion.so/maikroservice/log4j-box-3c81a41b19564556b9c77994af6bd02d)
+
+∏
+running the box:
 
 ```bash
-docker build -t log4j_box .
+docker-compose build
 ```
 
 to run the container use
 
 ```bash
-docker run -d -p 8983:8983 log4j_box
+docker-compose up
 ```
-
-the container should now be available on port 8983 on your host
